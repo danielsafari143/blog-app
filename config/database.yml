@@ -25,7 +25,7 @@ development:
   <<: *default
   host: localhost
   port: 5432
-  database: blog
+  database: blogue
   username: postgres
   password: safari
 
