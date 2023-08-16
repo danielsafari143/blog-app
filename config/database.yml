@@ -23,7 +23,11 @@ default: &default
 
 development:
   <<: *default
-  database: blog_app_development
+  host: localhost
+  port: 5432
+  database: blogue
+  username: postgres
+  password: safari
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
