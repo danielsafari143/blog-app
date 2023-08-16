@@ -1,10 +1,10 @@
 class Like < ApplicationRecord
-  has_one :users
-  has_one :comments
+  belongs_to :author, class_name: 'User'
+  belongs_to :post
 
-  def update_likes_counter(post)
-    @post = Post.find_by(id: post)
-    @post.likes_counter = Like.where(post_id: @post.id).count
-    @post.save
+  after_save :update_likes_counter
+
+  def update_likes_counter
+    post.increment!(:likes_counter)
   end
 end

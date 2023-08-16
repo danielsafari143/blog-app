@@ -1,10 +1,10 @@
 class Comment < ApplicationRecord
-  has_many :likes
-  has_one :user
+  belongs_to :author, class_name: 'User'
+  belongs_to :post
 
-  def update_comments_counter(post)
-    @post = Post.find_by(id: post)
-    @post.comments_counter = Comment.where(post_id: @post.id).count
-    @post.save
+  after_save :update_comments_counter
+
+  def update_comments_counter
+    post.increment!(:comments_counter)
   end
 end
