@@ -6,4 +6,9 @@ class Post < ApplicationRecord
       @user.postsCounter = Post.where(author_id: @user.id).count
       @user.save
     end
+
+    def get_comments(post)
+      @post = Post.find_by(id: post)
+      @comments = Comment.where(post_id: @post.id).limit(5)
+    end
 end
