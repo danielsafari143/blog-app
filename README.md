@@ -49,7 +49,11 @@ This backend blog app is a powerful and scalable platform for creating and manag
 - User SChema
 - Comments Schema
 - Likes Schema
-- Posts SChema 
+- Posts SChema
+- User Modal
+- Comments Modal
+- Likes Modal
+- Posts Modal  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
