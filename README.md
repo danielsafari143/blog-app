@@ -1,128 +1,94 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  
-  <br/>
-
-  <h3><b>Blog </b></h3>
-
+  <h3><b>Blog-app</b></h3>
 </div>
-
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-- [👥 Authors](#authors)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Blog-app](#-catalog-of-things)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Presentation video](#presentation-video)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-<!-- PROJECT DESCRIPTION -->
+# 📖 Blog-app<a name="about-project"></a>
 
-# 📖 Blog <a name="about-project"></a>
-
-
-This backend blog app is a powerful and scalable platform for creating and managing blogs. It features a user-friendly interface, a robust API, and a flexible architecture that can be customized to meet the needs of any blog.
+This is a simple, fully-functional, secure, scalable, and user-friendly blog app built with Ruby on Rails that allows users to create, read, edit, and delete posts. It also allows users to comment on posts and like posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<a href="https://www.ruby-lang.org/en/" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="html5" width="60" height="100"/></a>
-
-<!-- Features -->
+- RUBY
 
 ### Key Features <a name="key-features"></a>
 
-- User SChema
-- Comments Schema
-- Likes Schema
-- Posts SChema
-- User Modal
-- Comments Modal
-- Likes Modal
-- Posts Modal  
+- [ ] **Users can create, read, edit, and delete posts.**
+- [ ] **Users can comment on posts.**
+- [ ] **Users can like posts**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
+To get started with this app, you will need to have Ruby and Rails installed on your computer. Once you have Ruby and Rails installed.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+- git
+- Ruby
 
 ### Setup
 
 Clone this repository to your desired folder:
 
+```sh
   cd my-folder
   git clone https://github.com/danielsafari143/blog-app.git
-
-### Install
-
-Install this project with:
-
   bundle install
+```
 
 ### Usage
 
 To run the project, execute the following command:
 
+```sh
+  rails db:create
+  rails db:migrate
   rails server
+```
 
 ### Run tests
 
-To run tests, run the following command:
-
-<!--
-Example command:
+To run tests, run the following commands:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec spec Rspec/specs/
+  rubocop
 ```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
+### Presentation video
+
+presentation video : [Video]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -131,38 +97,33 @@ Example:
 - GitHub: [@danielsafari143]([https://github.com/githubhandle](https://github.com/danielsafari143))
 - LinkedIn: [Safari Daniel](https://www.linkedin.com/in/safari-daniel/)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🔭 Future Features <a name="future-features"></a>
 
-<!-- CONTRIBUTING -->
+- [ ] **Connect to a real database**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
+If you would like to contribute to this app, please feel free to fork the repository and submit a pull request.
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/DilsherB/catalog-of-my-things/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give it a star 🌟🌟🌟
+If you like this project give me a follow and/or a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
-I would like to thank **![Microverse](https://img.shields.io/badge/Microverse-blueviolet)**
+We would like to thank all my coding partners at Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
