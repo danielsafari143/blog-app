@@ -39,6 +39,7 @@ This is a simple, fully-functional, secure, scalable, and user-friendly blog app
 - [ ] **Users can create, read, edit, and delete posts.**
 - [ ] **Users can comment on posts.**
 - [ ] **Users can like posts**
+- [ ] **Test for all models**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +79,7 @@ To run the project, execute the following command:
 To run tests, run the following commands:
 
 ```sh
-  rspec spec Rspec/specs/
+  rspec
   rubocop
 ```
 
@@ -101,7 +102,9 @@ presentation video : [Video]()
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Connect to a real database**
+- [] **Add controllers**
+- [] **Add View** 
+- [] **Authentification, Authorization**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
