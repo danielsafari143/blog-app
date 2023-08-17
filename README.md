@@ -88,7 +88,7 @@ To run tests, run the following commands:
 
 👤 **Safari Hamuli**
 
-- GitHub: [@danielsafari143]([https://github.com/githubhandle](https://github.com/danielsafari143))
+- GitHub: [@danielsafari143](https://github.com/danielsafari143)
 - LinkedIn: [Safari Daniel](https://www.linkedin.com/in/safari-daniel/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
