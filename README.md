@@ -16,7 +16,6 @@
     - [Setup](#setup)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-    - [Presentation video](#presentation-video)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -82,12 +81,6 @@ To run tests, run the following commands:
   rspec
   rubocop
 ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Presentation video
-
-presentation video : [Video]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
