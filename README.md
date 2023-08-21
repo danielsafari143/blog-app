@@ -95,8 +95,6 @@ To run tests, run the following commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [] **Add controllers**
-- [] **Add View** 
 - [] **Authentification, Authorization**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
