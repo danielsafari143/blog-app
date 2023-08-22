@@ -3,8 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'rspec-rails'
 gem 'rails-controller-testing'
+gem 'rspec-rails'
 
 ruby '2.7.8'
 
