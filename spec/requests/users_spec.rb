@@ -14,7 +14,6 @@ describe 'USERS CONTROLLER' do
       expect(response).to render_template('index')
     end
 
-
     it 'return http success for /users/:id' do
       get '/users/21'
       expect(response).to have_http_status(:success)
