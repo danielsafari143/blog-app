@@ -8,12 +8,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid blue;
 }
 
 .name-img {
-    border: 1px solid black;
     width: 80vw;
+    display: flex;
+    align-items: row;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 li {
@@ -25,4 +27,18 @@ li {
     height: 80px;
     width: 80px;
     object-fit: cover;
+}
+
+.name-img .name {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.name-img .comments-counter {
+    align-self: flex-end;
+    justify-self: flex-start;
 }
