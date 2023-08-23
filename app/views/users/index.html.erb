@@ -1,11 +1,11 @@
  <%= stylesheet_link_tag "style" %>
- 
+
 <div>
     <ul>
         <%@user.each do |item| %>
           <li>
-            <p>
-                <img src=<%=item.photo%> alt='Profile'/>
+            <p class= 'name-img'>
+                <img src=<%=item.photo%> alt='Profile' class = 'cover-img'  />
                 UserName :  <%=item.name%>
             </p>
             <p>Number of posts: <%= item.posts_counter%></p>
