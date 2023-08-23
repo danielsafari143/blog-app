@@ -1,13 +1,23 @@
 <div>
-    #<%= @post.id %> 
-    <div>
-        </span>Comment : <%= @post.comments_counter %>, Likes: <%= @post.likes_counter%></span>
-       <p> <%= @post.text %> </p>
+    <div class='post'>
+            <p>Post #<%= @post.id%></p>
+            <p>
+                 <%= link_to @post.title , "posts/#{@post.id}" %>
+            </p>
+            <p><%= @post.text %></p>
+            <p class='details'>
+                <span>comments: <%= @post.comments_counter %></span>, 
+                <span>Likes: <%= @post.likes_counter %> </span>
+            </p>
     </div>
-    <ul>
-        <% @comment.each do |item| %>
-            <p>Comments : <%= User.find_by(id:item.author_id).name %> </p>
-        <% end %>
+    
+    <ul class='posts'>
+          <div class='five-comments'>
+            <% @comment.each do |item| %>
+               <p>User : <%= User.find_by(id:item.author_id).name %></p>
+               <p><%= item.text %></p>
+             <% end %>
+          </div>
     </ul>
 </div>
 
