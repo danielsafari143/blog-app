@@ -42,3 +42,8 @@ li {
     align-self: flex-end;
     justify-self: flex-start;
 }
+
+.name-img .author-name a{
+    text-decoration: none;
+    color: black;
+}

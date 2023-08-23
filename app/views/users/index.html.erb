@@ -7,7 +7,8 @@
             <div class= 'name-img'>
                 <img src=<%=item.photo%> alt='Profile' class = 'cover-img'  />
                 <div class = 'name' >
-                    <p class='author-name'><%=item.name%></p>
+                     
+                    <p class='author-name'><%= link_to item.name , user_path(item.id) %></p>
                     <p  class='comments-counter' >Number of posts: <%= item.posts_counter%></p>
                 </div>
             </div>
