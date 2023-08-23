@@ -3,7 +3,7 @@
         <%@user.each do |item| %>
           <li>
             <p>
-                <img src= <%= item.photo%> alt= 'Profile'>
+                <img src=<%=item.photo%> alt='Profile'/>
                 UserName :  <%=item.name%>
             </p>
             <p>Number of posts: <%= item.posts_counter%></p>
