@@ -1,1 +1,13 @@
-<h3>Here is a list of users</h3>
+<div>
+    <ul>
+        <%@user.each do |item| %>
+          <li>
+            <p>
+                <img src= <%= item.photo%> alt= 'Profile'>
+                UserName :  <%=item.name%>
+            </p>
+            <p>Number of posts: <%= item.posts_counter%></p>
+          </li>
+        <% end %>
+    </ul>
+</div>

@@ -1,1 +1,19 @@
-<h3>Here is a user for a given userId</h3>
+<div>
+    <div>
+        <img>
+        <h3><%= @user.name %></h3>
+    </div>
+    <div>
+        <p>Bio</p>
+        <p><h3><%= @user.bio %></h3></p>
+    </div>
+    <ul>
+        <% @user.posts.each do |item| %>
+          <li><%= item.text %></li>
+          <p>
+            <span>comments: <%= item.comments_counter %></li> </span>, 
+            <span>Likes: <%= item.likes_counter %> </span>
+          </p>
+        <% end %>
+    </ul>
+</div>
