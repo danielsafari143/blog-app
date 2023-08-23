@@ -1,5 +1,12 @@
-<h3><%= @post.name %></h3>
 <div class='all-posts'>
+    <div class= 'name-img'> 
+         <img src=<%=@post.photo%> alt='Profile' class = 'cover-img'  />
+        <div class='name' >
+           <p> <%= @post.name %></h3></p>
+           <p class='nmb-posts'>Number of posts: <%= @post.posts_counter %> </p>
+        </div>
+    </div>
+
     <ul class='posts'>
         <% @post.posts.each do |item| %>
           <li class='post'>
@@ -11,6 +18,12 @@
                 <span>Likes: <%= item.likes_counter %> </span>
             </p>
           </li>
+          <div class='five-comments'>
+            <% item.five_recent_comments.each do |item| %>
+               <p>User : <%= User.find_by(id:item.author_id).name %></p>
+               <p><%= item.text %></p>
+             <% end %>
+          </div>
         <% end %>
     </ul>
 </div>
