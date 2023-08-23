@@ -1,13 +1,16 @@
 <h3><%= @post.name %></h3>
-<div>
-    <%@post.posts.each.with_index(1) do |item ,index| %>
-        <p>Post #<%=index%> </p>
-        <div>
+<div class='all-posts'>
+    <ul class='posts'>
+        <% @post.posts.each do |item| %>
+          <li class='post'>
+            <p>Post #<%= item.id%></p>
+            <p><%= item.title %></p>
             <p><%= item.text %></p>
-             <% item.comments.each do |item| %>
-               <p>Comments : <%= User.find_by(id:item.author_id).name %> </p>
-             <% end %>
-        </div>
-        </span> Comment : <%= item.comments_counter %>, Likes: <%= item.likes_counter%> </span>
-    <% end %>
+            <p class='details'>
+                <span>comments: <%= item.comments_counter %></span>, 
+                <span>Likes: <%= item.likes_counter %> </span>
+            </p>
+          </li>
+        <% end %>
+    </ul>
 </div>

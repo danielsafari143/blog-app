@@ -15,15 +15,21 @@
     </div>
 
     <ul class='posts'>
-        <% @user.posts.each do |item| %>
+        <% @user.three_recent_posts.each do |item| %>
           <li class='post'>
             <p>Post #<%= item.id%></p>
+            <p><%= item.title %></p>
             <p><%= item.text %></p>
-            <p>
+            <p class='details'>
                 <span>comments: <%= item.comments_counter %></span>, 
                 <span>Likes: <%= item.likes_counter %> </span>
+                <%=@post%>
             </p>
           </li>
         <% end %>
     </ul>
+
+    <button>
+        <%= link_to 'See all posts' , "#{@user.id}/posts" %>
+    </button>
 </div>
