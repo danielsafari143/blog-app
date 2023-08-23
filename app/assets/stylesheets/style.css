@@ -44,8 +44,7 @@ li {
     justify-self: flex-start;
 }
 
-.name-img .author-name a{
-    text-decoration: none;
+a{
     color: black;
 }
 
@@ -114,4 +113,8 @@ li {
     text-decoration: none;
     color: black;
     font-weight: bolder;
+}
+
+.last-user {
+    font-weight: bold;
 }

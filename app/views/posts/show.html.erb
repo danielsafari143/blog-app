@@ -1,8 +1,8 @@
-<div>
+<div class= 'last-user'>
     <div class='post'>
             <p>Post #<%= @post.id%> By <%= @post.author.name %></p>
             <p>
-                 <%= link_to @post.title , "posts/#{@post.id}" %>
+                 <%= @post.title %>
             </p>
             <p><%= @post.text %></p>
             <p class='details'>
