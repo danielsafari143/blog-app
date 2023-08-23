@@ -1,1 +1,13 @@
-<h3>Get a post for a given postId</h3>
+<div>
+    #<%= @post.id %> 
+    <div>
+        </span>Comment : <%= @post.comments_counter %>, Likes: <%= @post.likes_counter%></span>
+       <p> <%= @post.text %> </p>
+    </div>
+    <ul>
+        <% @comment.each do |item| %>
+            <p>Comments : <%= User.find_by(id:item.author_id).name %> </p>
+        <% end %>
+    </ul>
+</div>
+

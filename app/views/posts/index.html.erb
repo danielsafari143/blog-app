@@ -5,8 +5,9 @@
         <div>
             <p><%= item.text %></p>
              <% item.comments.each do |item| %>
-               <p>Comments : <%= User.find_by(id:item.author_id).name %></p>
+               <p>Comments : <%= User.find_by(id:item.author_id).name %> </p>
              <% end %>
         </div>
+        </span> Comment : <%= item.comments_counter %>, Likes: <%= item.likes_counter%> </span>
     <% end %>
 </div>

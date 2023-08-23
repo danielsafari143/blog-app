@@ -3,5 +3,8 @@ class PostsController < ApplicationController
     @post = User.find_by(id: params['user_id'])
   end
 
-  def show; end
+  def show
+    @post = User.find_by(id: params['user_id']).posts.find_by(id: params['id'])
+    @comment = Comment.where(post_id: @post)
+  end
 end
