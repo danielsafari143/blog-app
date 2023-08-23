@@ -1,6 +1,6 @@
 <div>
     <div class='post'>
-            <p>Post #<%= @post.id%></p>
+            <p>Post #<%= @post.id%> By <%= @post.author.name %></p>
             <p>
                  <%= link_to @post.title , "posts/#{@post.id}" %>
             </p>
@@ -10,11 +10,11 @@
                 <span>Likes: <%= @post.likes_counter %> </span>
             </p>
     </div>
-    
+
     <ul class='posts'>
           <div class='five-comments'>
             <% @comment.each do |item| %>
-               <p>User : <%= User.find_by(id:item.author_id).name %></p>
+               <p>User : <%= item.author.name %></p>
                <p><%= item.text %></p>
              <% end %>
           </div>

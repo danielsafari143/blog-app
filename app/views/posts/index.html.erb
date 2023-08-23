@@ -22,13 +22,13 @@
           </li>
           <div class='five-comments'>
             <% item.five_recent_comments.each do |item| %>
-               <p>User : <%= User.find_by(id:item.author_id).name %></p>
+               <p>User : <%= item.author.name %></p>
                <p><%= item.text %></p>
              <% end %>
           </div>
         <% end %>
     </ul>
     <button class='btn'>
-        <%= link_to 'Pagination' , "posts/#{1}" %>
+        <%= link_to 'Pagination' , "/users/#{@post.id}" %>
     </button>
 </div>

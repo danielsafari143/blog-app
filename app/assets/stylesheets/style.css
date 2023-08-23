@@ -59,7 +59,7 @@ li {
     width: 80vw;
 }
 
-.spec-user {
+.spec-user , .all-posts{
     font-weight: bolder;
     display: flex;
     flex-direction: column;
