@@ -1,19 +1,29 @@
-<div>
-    <div>
-        <img>
-        <h3><%= @user.name %></h3>
+ <%= stylesheet_link_tag "style" %>
+
+<div class='spec-user'>
+    <div class= 'name-img'> 
+         <img src=<%=@user.photo%> alt='Profile' class = 'cover-img'  />
+        <div class='name' >
+           <p> <%= @user.name %></h3></p>
+           <p class='nmb-posts'>Number of posts: <%= @user.posts_counter %> </p>
+        </div>
     </div>
-    <div>
+
+    <div class= 'bio'>
         <p>Bio</p>
         <p><h3><%= @user.bio %></h3></p>
     </div>
-    <ul>
+
+    <ul class='posts'>
         <% @user.posts.each do |item| %>
-          <li><%= item.text %></li>
-          <p>
-            <span>comments: <%= item.comments_counter %></li> </span>, 
-            <span>Likes: <%= item.likes_counter %> </span>
-          </p>
+          <li class='post'>
+            <p>Post #<%= item.id%></p>
+            <p><%= item.text %></p>
+            <p>
+                <span>comments: <%= item.comments_counter %></span>, 
+                <span>Likes: <%= item.likes_counter %> </span>
+            </p>
+          </li>
         <% end %>
     </ul>
 </div>

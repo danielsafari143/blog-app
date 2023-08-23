@@ -47,3 +47,28 @@ li {
     text-decoration: none;
     color: black;
 }
+
+.bio {
+    border: 1px solid black;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.spec-user {
+    font-weight: bolder;
+}
+
+.spec-user .posts .post {
+    border: 1px solid black;
+    margin-top: 10px;
+    height: auto;
+    padding: 10px;
+}
+
+.spec-user .nmb-posts {
+    align-self: flex-end;
+    justify-self: flex-end;
+}
