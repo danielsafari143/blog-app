@@ -1,1 +1,34 @@
-<h3>Here is a list of posts for a given user</h3>
+<div class='all-posts'>
+    <div class= 'name-img'> 
+         <img src=<%=@post.photo%> alt='Profile' class = 'cover-img'  />
+        <div class='name' >
+           <p> <%= @post.name %></h3></p>
+           <p class='nmb-posts'>Number of posts: <%= @post.posts_counter %> </p>
+        </div>
+    </div>
+
+    <ul class='posts'>
+        <% @post.posts.each do |item| %>
+          <li class='post'>
+            <p>Post #<%= item.id%></p>
+            <p>
+                 <%= link_to item.title , "posts/#{item.id}" %>
+            </p>
+            <p><%= item.text %></p>
+            <p class='details'>
+                <span>comments: <%= item.comments_counter %></span>, 
+                <span>Likes: <%= item.likes_counter %> </span>
+            </p>
+          </li>
+          <div class='five-comments'>
+            <% item.five_recent_comments.each do |item| %>
+               <p>User : <%= item.author.name %></p>
+               <p><%= item.text %></p>
+             <% end %>
+          </div>
+        <% end %>
+    </ul>
+    <button class='btn'>
+        <%= link_to 'Pagination' , "/users/#{@post.id}" %>
+    </button>
+</div>
