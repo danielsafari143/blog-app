@@ -26,7 +26,7 @@
           </li>
         <% end %>
     </ul>
-
+    <p class='new-post'> <%= link_to 'New post' , "/users/#{@user.id}/posts/new" %></p>
     <button class='btn'>
         <%= link_to 'See all posts' , "#{@user.id}/posts" %>
     </button>

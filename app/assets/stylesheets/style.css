@@ -140,3 +140,9 @@ form {
 input {
   padding: 10px;
 }
+
+.new-post {
+  align-self: self-start;
+  justify-self: self-start;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
