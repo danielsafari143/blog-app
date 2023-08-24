@@ -118,3 +118,25 @@ a {
 .last-user {
   font-weight: bold;
 }
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap:10px
+}
+
+#text {
+  padding: 10px;
+  height: 200px;
+}
+
+#title{
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input {
+  padding: 10px;
+}
