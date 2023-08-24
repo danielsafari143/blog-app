@@ -14,9 +14,9 @@ class PostsController < ApplicationController
 
   def create
     @values = params[:post]
-    @post= Post.new(title: @values['title'] , text: @values['text'] , author:User.find_by(id:params['user_id']))
-    if @post.save
-      redirect_to "/users/#{params['user_id']}"
-    end
+    @post = Post.new(title: @values['title'], text: @values['text'], author: User.find_by(id: params['user_id']))
+    return unless @post.save
+
+    redirect_to "/users/#{params['user_id']}"
   end
 end
