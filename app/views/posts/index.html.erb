@@ -25,6 +25,9 @@
                <p>User : <%= item.author.name %></p>
                <p><%= item.text %></p>
              <% end %>
+             <P class='cmt'>
+                <%= link_to 'Add a comment' , "/users/#{@post.id}/posts/#{item.id}/comments/new" %>
+             </P>
           </div>
         <% end %>
     </ul>
