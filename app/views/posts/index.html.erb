@@ -25,9 +25,14 @@
                <p>User : <%= item.author.name %></p>
                <p><%= item.text %></p>
              <% end %>
-             <P class='cmt'>
+             <div class='cmt'>
+                <P>
                 <%= link_to 'Add a comment' , "/users/#{@post.id}/posts/#{item.id}/comments/new" %>
-             </P>
+                </P>
+                <P>
+                  <%= link_to 'Like' , "/users/#{@post.id}/posts/#{item.id}/likes/" %>
+                </P>
+             </div>
           </div>
         <% end %>
     </ul>
