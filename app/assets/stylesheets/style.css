@@ -127,7 +127,7 @@ form {
   gap:10px
 }
 
-#post_text {
+textarea {
   padding: 10px;
   height: 200px;
 }
