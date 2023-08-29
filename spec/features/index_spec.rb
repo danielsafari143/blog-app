@@ -30,12 +30,12 @@ RSpec.describe 'Homepage', type: :user do
 
   it 'redirects to the user show page when a user is clicked' do
     visit '/users'
-  
-    if user = page.all('.username').first
+
+    if (user = page.all('.username').first)
       user.click
       expect(page.current_path).to eq(user_path(user.text))
     else
-      puts "There is no user to click on."
+      puts 'There is no user to click on.'
     end
   end
 end

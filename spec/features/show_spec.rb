@@ -1,14 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Homepage', type: :user do
-    it 'has a profile picture' do
-        visit '/users/1'
+  it 'has a profile picture' do
+    visit '/users/1'
 
-        users = page.all('.profile-picture')
-        users.each do |profile_picture|
-          expect(profile_picture).to have_css('img')
-        end
+    users = page.all('.profile-picture')
+    users.each do |profile_picture|
+      expect(profile_picture).to have_css('img')
     end
+  end
 
   it 'has a bio section' do
     visit '/users/1'
@@ -43,14 +43,14 @@ RSpec.describe 'Homepage', type: :user do
 
   it 'redirects to the user show page when a user is clicked' do
     visit '/users/1'
-  
-    if user = page.all('.username').first
+
+    if (user = page.all('.username').first)
       user.click
       expect(page.current_path).to eq(user_path(user.text))
     else
-      puts "There is no user to click on."
+      puts 'There is no user to click on.'
     end
-  end 
+  end
 
   it 'redirects to the user\'s post index page when I click to see all posts' do
     visit '/users/1'
