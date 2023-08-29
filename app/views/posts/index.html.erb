@@ -22,7 +22,7 @@
           </li>
           <div class='five-comments'>
 
-            <% item.five_recent_comments.includes(:author).each do |item| %>
+            <% item.five_recent_comments.each do |item| %>
                <p>User : <%= item.author.name %></p>
                <p><%= item.text %></p>
              <% end %>
