@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @post = User.includes(:posts).find_by(id: params['user_id'])
+    @pos = User.includes(:posts) do |post|
+      post.five_recent_comments 
+    end
+
+    @post = @pos.find_by(id: params['user_id'])
   end
 
   def show
