@@ -8,7 +8,7 @@
     </div>
 
     <ul class='posts'>
-        <% @post.posts.each do |item| %>
+        <% @post.posts.includes(:author).each do |item| %>
           <li class='post'>
             <p>Post #<%= item.id%></p>
             <p>
@@ -21,10 +21,10 @@
             </p>
           </li>
           <div class='five-comments'>
-            <% item.five_recent_comments.each do |item| %>
+            
                <p>User : <%= item.author.name %></p>
                <p><%= item.text %></p>
-             <% end %>
+             
              <div class='cmt'>
                 <P>
                 <%= link_to 'Add a comment' , "/users/#{@post.id}/posts/#{item.id}/comments/new" %>
