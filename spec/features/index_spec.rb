@@ -1,13 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Homepage', type: :user do
-  
   fake_user = User.create(name: 'Kena', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
   first_post = Post.create(author: fake_user, title: 'Hello', text: 'This is my first post')
   second_post = Post.create(author: fake_user, title: 'Hello', text: 'This is my first post')
   Post.create(author: fake_user, title: 'Hello', text: 'This is my first post')
-  Comment.create('text' => 'Bonjour les freres' , 'author' => fake_user , 'post' => first_post)
-  Comment.create('text' => 'Bonjour les freres' , 'author' => fake_user , 'post' => second_post)
+  Comment.create('text' => 'Bonjour les freres', 'author' => fake_user, 'post' => first_post)
+  Comment.create('text' => 'Bonjour les freres', 'author' => fake_user, 'post' => second_post)
 
   it 'shows the username of all other users' do
     visit '/users'
