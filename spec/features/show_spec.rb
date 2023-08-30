@@ -33,6 +33,30 @@ RSpec.describe 'Homepage', type: :user do
       expect(number_of_posts).to have_content(number_of_posts.text)
     end
   end
- 
+
   #-- rest of the code after this line
+  it 'shows the number of posts' do
+    visit "/users/#{fake_user.id}"
+    users = page.find_all('.post')
+    expect(users.length).to eq(3)
+  end
+  it 'shows the button that lets me view all of a user posts.' do
+    visit "/users/#{fake_user.id}"
+    users = page.find('.btn')
+    expect(users).to have_content('See all posts')
+  end
+  it 'redirects to the user show page when a user is clicked' do
+    visit "/users/#{fake_user.id}"
+    if (user = page.all('.username').first)
+      user.click
+      expect(page.current_path).to eq(user_path(user.text))
+    else
+      puts 'There is no user to click on.'
+    end
+  end
+  it 'redirects to the user\'s post index page when I click to see all posts' do
+    visit "/users/#{fake_user.id}"
+    click_link('See all posts')
+    expect(page).to have_current_path("/users/#{fake_user.id}/posts")
+  end
 end
