@@ -23,7 +23,6 @@ RSpec.describe 'Homepage', type: :user do
     expect(page).to have_content('comments: 1')
   end
 
-  ##----- rest of the code after this comment line
   it 'shows how many likes it has' do
     visit "/users/#{fake_user.id}/posts/#{first_post.id}"
     expect(page).to have_content('Likes: 0')
