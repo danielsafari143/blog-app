@@ -11,7 +11,7 @@
         <% @post.posts.each do |item| %>
           <li class='post'>
             <p>Post #<%= item.id%></p>
-            <p>
+            <p class="pst">
                  <%= link_to item.title , "posts/#{item.id}" %>
             </p>
             <p><%= item.text %></p>
@@ -21,15 +21,17 @@
             </p>
           </li>
           <div class='five-comments'>
+
             <% item.five_recent_comments.each do |item| %>
                <p>User : <%= item.author.name %></p>
-               <p><%= item.text %></p>
+               <p class='cmt-text'><%= item.text %></p>
              <% end %>
+
              <div class='cmt'>
                 <P>
                 <%= link_to 'Add a comment' , "/users/#{@post.id}/posts/#{item.id}/comments/new" %>
                 </P>
-                <P>
+                <P class="likes">
                   <%= link_to 'Like' , "/users/#{@post.id}/posts/#{item.id}/likes/" %>
                 </P>
              </div>
