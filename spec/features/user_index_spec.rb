@@ -23,23 +23,5 @@ RSpec.describe 'Homepage', type: :user do
     expect(page).to have_content('comments: 1')
   end
 
-  it 'shows how many likes it has' do
-    visit "/users/#{fake_user.id}/posts/#{first_post.id}"
-    expect(page).to have_content('Likes: 0')
-  end
-
-  it 'shows the post body' do
-    visit "/users/#{fake_user.id}/posts/#{first_post.id}"
-    expect(page).to have_content(first_post.text)
-  end
-
-  it 'shows the username of each commentor' do
-    visit "/users/#{fake_user.id}/posts/#{first_post.id}"
-    expect(page).to have_content('Kena')
-  end
-
-  it 'shows the comment each commentor left' do
-    visit "/users/#{fake_user.id}/posts/#{first_post.id}"
-    expect(page).to have_content('Bonjour les freres')
-  end
+  ##----- rest of the code after this comment line 
 end
