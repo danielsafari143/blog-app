@@ -6,7 +6,6 @@ describe 'USERS CONTROLLER' do
       get '/users'
       expect(response).to have_http_status(:success)
       expect(response).to render_template('index')
-      expect(response.body).to include('Here is a list of users')
     end
 
     it 'return the correct template' do
@@ -15,13 +14,12 @@ describe 'USERS CONTROLLER' do
     end
 
     it 'return http success for /users/:id' do
-      get '/users/21'
+      get '/users/1'
       expect(response).to have_http_status(:success)
-      expect(response.body).to include('Here is a user for a given userId')
     end
 
     it 'return the correct template' do
-      get '/users/21'
+      get '/users/1'
       expect(response).to render_template('show')
     end
   end

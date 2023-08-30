@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Homepage', type: :user do
+RSpec.describe 'User index page' do
   fake_user = User.create(name: 'Kena', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
   first_post = Post.create(author: fake_user, title: 'Hello', text: 'This is my first post')
   second_post = Post.create(author: fake_user, title: 'Hello', text: 'This is my first post')
