@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @post = User.includes(:posts, :comments).find_by(id: params['user_id'])
   end
@@ -7,6 +8,7 @@ class PostsController < ApplicationController
   def show
     @post = User.find_by(id: params['user_id']).posts.find_by(id: params['id'])
     @comment = Comment.includes(:author).where(post_id: @post)
+    authorize! :read, @post
   end
 
   def new
