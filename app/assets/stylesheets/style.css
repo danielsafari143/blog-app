@@ -156,3 +156,21 @@ input {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.new_login {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field input{
+  width: 40vw;
+}
+
+.actions input{
+  width: 40vw;
+}
