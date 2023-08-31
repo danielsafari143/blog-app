@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_login!
+  before_action :authenticate_user!
   def index
     puts
     redirect_to "/users/#{params['user_id']}/posts/#{params['post_id']}"
