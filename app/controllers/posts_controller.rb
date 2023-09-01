@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def show
     @post = User.find_by(id: params['user_id']).posts.find_by(id: params['id'])
     @comment = Comment.includes(:author).where(post_id: @post)
-    puts 'shiw'
+    puts params
   end
 
   def new
