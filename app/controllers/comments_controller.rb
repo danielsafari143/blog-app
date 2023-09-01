@@ -19,7 +19,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find_by(id: params['id'])
-    @post.destroy
+    @comment = Comment.find_by(id: params['id'])
+    authorize! :delete, @comment
+    @comment.destroy
+    redirect_to "/users/#{params['user_id']}/posts"
   end
 end

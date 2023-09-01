@@ -28,6 +28,6 @@ class PostsController < ApplicationController
     authorize! :delete, @post
     @post.comments.destroy_all
     @post.destroy
-    redirect_to "/users/#{params['user_id']}"
+    redirect_to "/users/#{params['user_id']}/posts"
   end
 end
