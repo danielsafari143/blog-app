@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!
+
   def index
     @post = Post.find_by(id: params['post_id'])
     
@@ -22,9 +22,8 @@ class CommentsController < ApplicationController
     @values = params[:comment]
     @comment = Comment.new(text: @values['text'], author: User.find_by(id: params['user_id']),
                            post: Post.find_by(id: params['post_id']))
-    return unless @comment.save
-
-    redirect_to '/users'
+    return render json: { message: "Error" }, status: :bad_request unless @comment.save
+    render json: { message: "Created" }, status: :created
   end
 
   def destroy
