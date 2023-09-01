@@ -3,11 +3,8 @@ class Ability
 
   def initialize(user)
     can :delete, Post, author: user
-    can :delete, Post if user.role == 'admin'
-
     can :delete, Comment, author: user
-    return unless user.role == 'admin'
-
-    can :delete, Post
+    can :delete, Post if user.role == 'admin'
+    can :delete, Comment if user.role == 'admin'
   end
 end

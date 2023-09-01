@@ -18,6 +18,9 @@
             <p class='details'>
                 <span>comments: <%= item.comments_counter %></span>, 
                 <span>Likes: <%= item.likes_counter %> </span>
+                <%if can? :delete , item%>
+                  <span><button><%= link_to 'Delete', url_for(controller: 'posts', action: 'destroy', id: item.id), data: { confirm: 'Are you sure?' , turbo_method: :delete} %></button></span>
+                <%end%>
             </p>
           </li>
           <div class='five-comments'>

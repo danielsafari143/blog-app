@@ -17,4 +17,9 @@ class CommentsController < ApplicationController
 
     redirect_to "/users/#{params['user_id']}/posts/#{params['post_id']}"
   end
+
+  def destroy
+    @post = Post.find_by(id: params['id'])
+    @post.destroy
+  end
 end
