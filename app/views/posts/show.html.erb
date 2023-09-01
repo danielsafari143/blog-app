@@ -16,6 +16,9 @@
             <% @comment.each do |item| %>
                <p>User : <%= item.author.name %></p>
                <p><%= item.text %></p>
+               <%if can? :delete , item%>
+                <div><button class='btn-delete'><%= link_to 'Delete', "#{item.post.id}/comments/#{item.id}", data: { turbo_method: :delete} %></button></div>
+              <%end%>
              <% end %>
              <div class='cmt'>
                 <P>

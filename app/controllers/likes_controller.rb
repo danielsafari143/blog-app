@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
   before_action :authenticate_user!
+
   def index
     puts params
     Like.create(author: User.find_by(id: params['user_id']), post: Post.find_by(id: params['post_id']))

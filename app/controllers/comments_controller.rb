@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
   def index
-    puts
     redirect_to "/users/#{params['user_id']}/posts/#{params['post_id']}"
   end
 
@@ -15,6 +14,13 @@ class CommentsController < ApplicationController
                            post: Post.find_by(id: params['post_id']))
     return unless @comment.save
 
-    redirect_to "/users/#{params['user_id']}/posts/#{params['post_id']}"
+    redirect_to '/users'
+  end
+
+  def destroy
+    @comment = Comment.find_by(id: params['id'])
+    authorize! :delete, @comment
+    @comment.destroy
+    redirect_to "/users/#{params['user_id']}/posts"
   end
 end

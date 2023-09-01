@@ -174,3 +174,14 @@ input {
 .actions input {
   width: 40vw;
 }
+
+.btn-delete {
+  padding: 5px;
+  background-color: rgb(219, 37, 37);
+  border: none;
+}
+
+.btn-delete a {
+  text-decoration: none;
+  color: white;
+}
