@@ -2,14 +2,14 @@ class CommentsController < ApplicationController
   def index
     @post = Post.find_by(id: params['post_id'])
 
-    # if @post
-    #   respond_to do |format|
-    #     format.html # index.html.erb
-    #     format.json { render json: @post.comments }
-    #   end
-    # else
-    #   render json: { error: 'Post not found' }, status: :not_found
-    # end
+    if @post
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @post.comments }
+      end
+    else
+      render json: { error: 'Post not found' }, status: :not_found
+    end
   end
 
   def new
