@@ -19,7 +19,7 @@
                 <span>comments: <%= item.comments_counter %></span>, 
                 <span>Likes: <%= item.likes_counter %> </span>
                 <%if can? :delete , item%>
-                  <span><button><%= link_to 'Delete', url_for(controller: 'posts', action: 'destroy', id: item.id), data: { confirm: 'Are you sure?' , turbo_method: :delete} %></button></span>
+                  <span><button class='btn-delete'><%= link_to 'Delete', url_for(controller: 'posts', action: 'destroy', id: item.id), data: { confirm: 'Are you sure?' , turbo_method: :delete} %></button></span>
                 <%end%>
             </p>
           </li>
@@ -29,7 +29,7 @@
                <p>User : <%= item.author.name %></p>
                <p class='cmt-text'><%= item.text %></p>
               <%if can? :delete , item%>
-                <button><%= link_to 'Delete', "posts/#{item.post.id}/comments/#{item.id}", data: { turbo_method: :delete} %></button>
+                <div><button class='btn-delete'><%= link_to 'Delete', "posts/#{item.post.id}/comments/#{item.id}", data: { turbo_method: :delete} %></button></div>
               <%end%>
              <% end %>
 

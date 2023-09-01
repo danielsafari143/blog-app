@@ -10,14 +10,11 @@ class CommentsController < ApplicationController
 
   def create
     @values = params[:comment]
-    poste = User.find_by(id:params['user_id']).posts.find_by(id:params['post_id'])
-    @comment = poste.comments.new(text: @values['text'], author: User.find_by(id: params['user_id']),
+    @comment = Comment.new(text: @values['text'], author: User.find_by(id: params['user_id']),
                            post: Post.find_by(id: params['post_id']))
-    puts @values
-    puts params['post_id']
-
     return unless @comment.save
-    redirect_to "/users"
+
+    redirect_to '/users'
   end
 
   def destroy
