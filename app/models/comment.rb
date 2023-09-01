@@ -13,6 +13,6 @@ class Comment < ApplicationRecord
   end
 
   def update_posts
-    post.decrement!(:posts_counter)
+    post.decrement!(:comments_counter)
   end
 end
