@@ -49,9 +49,9 @@ To get started with this app, you will need to have Ruby and Rails installed on 
 ## API endpoints
 
 ```sh
+  Get  : http://localhost:3000/users/:user_id/posts.json
   Get  : http://localhost:3000/users/:user_id/posts/:post_id/comments.json
   Post : http://localhost:3000/users/:user_id/posts/:post_id/comments
-  Get  : http://localhost:3000/users/:user_id.json
 ```
 
 ### Prerequisites
