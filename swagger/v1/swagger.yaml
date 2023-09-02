@@ -1,0 +1,72 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/users/{user_id}/posts.json":
+    get:
+      summary: Retrieve all the user's posts
+      tags:
+      - Blogs
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: blog found
+  "/users/{user_id}/posts/{post_id}/comments.json":
+    get:
+      summary: Retrieve all the user's post comment
+      tags:
+      - Blogs
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: post_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: blog found
+    post:
+      summary: Add a comment to a user's post
+      tags:
+      - Blogs
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: post_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Post created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+              required:
+              - text
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000

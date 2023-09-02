@@ -46,12 +46,17 @@ This is a simple, fully-functional, secure, scalable, and user-friendly blog app
 
 To get started with this app, you will need to have Ruby and Rails installed on your computer. Once you have Ruby and Rails installed.
 
+## API Documentations
+```sh
+  http://localhost:3000/api-docs/index.html
+```
+
 ## API endpoints
 
 ```sh
+  Get  : http://localhost:3000/users/:user_id/posts.json
   Get  : http://localhost:3000/users/:user_id/posts/:post_id/comments.json
   Post : http://localhost:3000/users/:user_id/posts/:post_id/comments
-  Get  : http://localhost:3000/users/:user_id.json
 ```
 
 ### Prerequisites
