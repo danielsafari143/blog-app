@@ -4,9 +4,9 @@ info:
   title: API V1
   version: v1
 paths:
-  "/user/{user_id}/posts":
+  "/users/{user_id}/posts.json":
     get:
-      summary: Retrieve all the users
+      summary: Retrieve all the user's posts
       tags:
       - Blogs
       parameters:
@@ -18,8 +18,55 @@ paths:
       responses:
         '200':
           description: blog found
+  "/users/{user_id}/posts/{post_id}/comments.json":
+    get:
+      summary: Retrieve all the user's post comment
+      tags:
+      - Blogs
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: post_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: blog found
+    post:
+      summary: Add a comment to a user's post
+      tags:
+      - Blogs
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: post_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Post created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+              required:
+              - text
 servers:
-- url: https://{defaultHost}
+- url: http://{defaultHost}
   variables:
     defaultHost:
-      default: www.example.com
+      default: localhost:3000
